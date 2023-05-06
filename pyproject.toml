@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "elementary-dbt-postgres"
+version = "0.1.0"
+description = ""
+authors = ["Noel <born.angelonoel@gmail.com>"]
+readme = "README.md"
+packages = [{include = "elementary_dbt_postgres"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+botocore = "^1.29.129"
+dbt-core = "^1.5.0"
+elementary-data = {extras = ["databricks"], version = "^0.7.8"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

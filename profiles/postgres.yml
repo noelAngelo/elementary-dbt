@@ -1,0 +1,46 @@
+version: '3'
+
+elementary:
+  outputs:
+
+    dev:
+      type: postgres
+      threads: 1
+      host: postgres
+      port: 5432
+      user: elementary
+      pass: elementary
+      dbname: jaffle_shop
+      schema: public_elementary
+
+  target: dev
+
+jaffle_shop:
+  outputs:
+
+    dev:
+      type: postgres
+      threads: 1
+      host: postgres
+      port: 5432
+      user: elementary
+      pass: elementary
+      dbname: jaffle_shop
+      schema: public
+
+  target: dev
+
+adventureworks:
+  outputs:
+
+    dev:
+      type: postgres
+      threads: 1
+      host: postgres
+      port: 5432
+      user: elementary
+      pass: elementary
+      dbname: adventureworks
+      schema: public
+
+  target: dev

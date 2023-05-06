@@ -1,0 +1,53 @@
+version: '3'
+x-dbt-common-volumes: &dbt-common-volumes
+  - ${PROJ_DIR:-.}/dbt/${PROJ_NAME:-jaffle_shop}:/usr/app
+  - ${PROJ_DIR:-.}/profiles/${DBT_ADAPTER:-postgres}.yml:/root/.dbt/profiles.yml
+x-dbt-common: &dbt-common
+  build:
+    context: dockerfiles/dbt-${DBT_ADAPTER:-postgres}
+    dockerfile: ./Dockerfile
+  volumes: *dbt-common-volumes
+
+services:
+  postgres:
+    image: postgres:13
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: elementary
+      POSTGRES_PASSWORD: elementary
+      POSTGRES_DB: postgres
+    volumes:
+      - ${PROJ_DIR:-.}/postgres/data:/var/lib/postgresql/data
+      - ${PROJ_DIR:-.}/postgres/config/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  dbt-postgres-init:
+    <<: *dbt-common
+    entrypoint: ["dbt"]
+    command: deps
+    volumes: *dbt-common-volumes
+
+  dbt-postgres-run:
+    <<: *dbt-common
+    entrypoint: ["dbt"]
+    command: run
+    volumes: *dbt-common-volumes
+
+  dbt-postgres-test:
+    <<: *dbt-common
+    entrypoint: ["dbt"]
+    command: test
+    volumes: *dbt-common-volumes
+
+  dbt-configure-connection-profile:
+    <<: *dbt-common
+    entrypoint: ["dbt"]
+    command: ["run-operation", "elementary.generate_elementary_cli_profile"]
+    volumes: *dbt-common-volumes
+
+  dbt-postgres-edr-report:
+    <<: *dbt-common
+    entrypoint: ["edr"]
+    command: ["report", "--file-path", "/usr/app/reports/report.html"]
+    volumes: *dbt-common-volumes
