@@ -1,0 +1,76 @@
+version: 2
+
+models:
+  - name: brz_aw_sales_order_header
+    description: ""
+    columns:
+      - name: sales_order_id
+        description: ""
+        tests:
+          - not_null
+          - unique
+      - name: ship_method_id
+        description: ""
+
+      - name: bill_to_address_id
+        description: ""
+
+      - name: modified_date
+        description: ""
+
+      - name: row_guid
+        description: ""
+
+      - name: tax_amt
+        description: ""
+
+      - name: ship_to_address_id
+        description: ""
+
+      - name: online_order_flag
+        description: ""
+
+      - name: territory_id
+        description: ""
+
+      - name: status
+        description: ""
+
+      - name: order_date
+        description: ""
+
+      - name: credit_card_approval_code
+        description: ""
+
+      - name: sub_total
+        description: ""
+
+      - name: credit_card_id
+        description: ""
+
+      - name: currency_rate_id
+        description: ""
+
+      - name: revision_number
+        description: ""
+
+      - name: freight
+        description: ""
+
+      - name: due_date
+        description: ""
+
+      - name: total_due
+        description: ""
+
+      - name: customer_id
+        description: ""
+
+      - name: sales_person_id
+        description: ""
+
+      - name: ship_date
+        description: ""
+
+      - name: account_number
+        description: ""

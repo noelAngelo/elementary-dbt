@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: brz_aw_sales_reason
+    description: ""
+    columns:
+      - name: sales_reason_id
+        description: ""
+        tests:
+          - not_null
+          - unique
+      - name: sales_reason_name
+        description: ""
+
+      - name: reason_type
+        description: ""
+
+      - name: modified_date
+        description: ""

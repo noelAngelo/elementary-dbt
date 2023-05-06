@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: slv_dim_address
+    columns:
+      - name: address_key
+        description: The surrogate key of the address_id
+        tests:
+          - not_null
+          - unique
+      
+      - name: address_id
+        description: The natural key
+        tests:
+          - not_null
+          - unique
+
+      - name: city_name
+        description: The city name
+
+      - name: state_name
+        description: The state name
+
+      - name: country_name
+        description: The country name
+      
+      - name: modified_date
+        description: The modified date

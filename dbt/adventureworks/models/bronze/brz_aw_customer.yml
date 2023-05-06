@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: brz_aw_customer
+    description: ""
+    columns:
+      - name: customer_id
+        description: ""
+        tests:
+          - not_null
+          - unique
+      - name: person_id
+        description: ""
+
+      - name: store_id
+        description: ""
+
+      - name: territory_id
+        description: ""

@@ -1,0 +1,27 @@
+version: 2 
+
+seeds: 
+  - name: product
+    config: 
+      # schema: production
+      column_types: 
+        productid: integer
+        name: string
+        safetystocklevel: smallint
+        finishedgoodsflag: boolean 
+        class: string
+        makeflag: boolean
+        productnumber: string
+        reorderpoint: smallint
+        modifieddate: timestamp
+        rowguid: string
+        productmodelid: integer
+        weightunitmeasurecode: string
+        standardcost: numeric
+        productsubcategoryid: integer
+        listprice: numeric
+        daystomanufacture: integer
+        productline: string
+        color: string
+        sellstartdate: timestamp
+        weight: numeric

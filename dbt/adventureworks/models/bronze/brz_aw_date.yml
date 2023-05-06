@@ -1,0 +1,31 @@
+version: 2
+models:
+  - name: brz_aw_date
+    description: ""
+    columns:
+      - name: date_day
+        description: ""
+
+      - name: prior_date_day
+        description: ""
+
+      - name: next_date_day
+        description: ""
+
+      - name: prior_year_date_day
+        description: ""
+
+      - name: prior_year_over_year_date_day
+        description: ""
+
+      - name: day_of_week
+        description: ""
+
+      - name: day_of_week_name
+        description: ""
+
+      - name: day_of_month
+        description: ""
+
+      - name: day_of_year
+        description: ""

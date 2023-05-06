@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: brz_aw_store
+    description: ""
+    columns:
+      - name: business_entity_id
+        description: ""
+        tests:
+          - not_null
+          - unique
+      - name: store_name
+        description: ""
+
+      - name: sales_person_id
+        description: ""
+
+      - name: modified_date
+        description: ""

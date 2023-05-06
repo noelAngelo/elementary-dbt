@@ -401,3 +401,4 @@ logs/
 postgres/data/
 *.html
 .vscode/
+.DS_Store

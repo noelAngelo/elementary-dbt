@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: brz_aw_sales_order_detail
+    description: ""
+    columns:
+      - name: sales_order_id
+        description: ""
+
+      - name: order_qty
+        description: ""
+
+      - name: sales_order_detail_id
+        description: ""
+        tests:
+          - not_null
+          - unique
+      - name: unit_price
+        description: ""
+
+      - name: special_offer_id
+        description: ""
+
+      - name: modified_date
+        description: ""
+
+      - name: row_guid
+        description: ""
+
+      - name: product_id
+        description: ""
+
+      - name: unit_priced_is_count
+        description: ""

@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: brz_aw_address
+    description: ""
+    columns:
+      - name: address_id
+        description: ""
+        tests:
+          - dbt_expectations.expect_column_values_to_not_be_null
+          - dbt_expectations.expect_column_values_to_be_unique
+      - name: address_line_1
+        description: ""
+
+      - name: address_line_2
+        description: ""
+
+      - name: city
+        description: ""
+
+      - name: state_province_id
+        description: ""
+
+      - name: postal_code
+        description: ""
+
+      - name: spatial_location
+        description: ""
+
+      - name: row_guid
+        description: ""
+
+      - name: modified_date
+        description: ""

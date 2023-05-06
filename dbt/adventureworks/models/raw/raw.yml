@@ -1,0 +1,306 @@
+version: 2
+
+sources:
+  - name: aw
+    description: ""
+    schema: atshah_raw
+    tables:
+      - name: address
+        description: ""
+        columns:
+          - name: addressid
+            description: ""
+          - name: addressline1
+            description: ""
+          - name: addressline2
+            description: ""
+          - name: city
+            description: ""
+          - name: stateprovinceid
+            description: ""
+          - name: postalcode
+            description: ""
+          - name: spatiallocation
+            description: ""
+          - name: rowguid
+            description: ""
+          - name: modifieddate
+            description: ""
+
+      - name: countryregion
+        description: ""
+        columns:
+          - name: countryregioncode
+            description: ""
+          - name: modifieddate
+            description: ""
+          - name: name
+            description: ""
+
+      - name: sales_creditcard
+        description: ""
+        columns:
+          - name: creditcardid
+            description: ""
+          - name: cardtype
+            description: ""
+          - name: expyear
+            description: ""
+          - name: modifieddate
+            description: ""
+          - name: expmonth
+            description: ""
+          - name: cardnumber
+            description: ""
+
+      - name: sales_customer
+        description: ""
+        columns:
+          - name: customerid
+            description: ""
+          - name: personid
+            description: ""
+          - name: storeid
+            description: ""
+          - name: territoryid
+            description: ""
+
+      - name: date
+        description: ""
+        columns:
+          - name: date_day
+            description: ""
+          - name: prior_date_day
+            description: ""
+          - name: next_date_day
+            description: ""
+          - name: prior_year_date_day
+            description: ""
+          - name: prior_year_over_year_date_day
+            description: ""
+          - name: day_of_week
+            description: ""
+          - name: day_of_week_name
+            description: ""
+          - name: day_of_month
+            description: ""
+          - name: day_of_year
+            description: ""
+
+      - name: person
+        description: ""
+        columns:
+          - name: businessentityid
+            description: ""
+          - name: title
+            description: ""
+          - name: firstname
+            description: ""
+          - name: middlename
+            description: ""
+          - name: lastname
+            description: ""
+          - name: persontype
+            description: ""
+          - name: namestyle
+            description: ""
+          - name: suffix
+            description: ""
+          - name: modifieddate
+            description: ""
+          - name: rowguid
+            description: ""
+          - name: emailpromotion
+            description: ""
+
+      - name: product
+        description: ""
+        columns:
+          - name: productid
+            description: ""
+          - name: name
+            description: ""
+          - name: safetystocklevel
+            description: ""
+          - name: finishedgoodsflag
+            description: ""
+          - name: class
+            description: ""
+          - name: makeflag
+            description: ""
+          - name: productnumber
+            description: ""
+          - name: reorderpoint
+            description: ""
+          - name: modifieddate
+            description: ""
+          - name: rowguid
+            description: ""
+          - name: productmodelid
+            description: ""
+          - name: weightunitmeasurecode
+            description: ""
+          - name: standardcost
+            description: ""
+          - name: productsubcategoryid
+            description: ""
+          - name: listprice
+            description: ""
+          - name: daystomanufacture
+            description: ""
+          - name: productline
+            description: ""
+          - name: color
+            description: ""
+          - name: sellstartdate
+            description: ""
+          - name: weight
+            description: ""
+
+      - name: productcategory
+        description: ""
+        columns:
+          - name: productcategoryid
+            description: ""
+          - name: name
+            description: ""
+          - name: modifieddate
+            description: ""
+
+      - name: productsubcategory
+        description: ""
+        columns:
+          - name: productsubcategoryid
+            description: ""
+          - name: productcategoryid
+            description: ""
+          - name: name
+            description: ""
+          - name: modifieddate
+            description: ""
+
+      - name: salesorderdetail
+        description: ""
+        columns:
+          - name: salesorderid
+            description: ""
+          - name: orderqty
+            description: ""
+          - name: salesorderdetailid
+            description: ""
+          - name: unitprice
+            description: ""
+          - name: specialofferid
+            description: ""
+          - name: modifieddate
+            description: ""
+          - name: rowguid
+            description: ""
+          - name: productid
+            description: ""
+          - name: unitpricediscount
+            description: ""
+
+      - name: salesorderheader
+        description: ""
+        columns:
+          - name: salesorderid
+            description: ""
+          - name: shipmethodid
+            description: ""
+          - name: billtoaddressid
+            description: ""
+          - name: modifieddate
+            description: ""
+          - name: rowguid
+            description: ""
+          - name: taxamt
+            description: ""
+          - name: shiptoaddressid
+            description: ""
+          - name: onlineorderflag
+            description: ""
+          - name: territoryid
+            description: ""
+          - name: status
+            description: ""
+          - name: orderdate
+            description: ""
+          - name: creditcardapprovalcode
+            description: ""
+          - name: subtotal
+            description: ""
+          - name: creditcardid
+            description: ""
+          - name: currencyrateid
+            description: ""
+          - name: revisionnumber
+            description: ""
+          - name: freight
+            description: ""
+          - name: duedate
+            description: ""
+          - name: totaldue
+            description: ""
+          - name: customerid
+            description: ""
+          - name: salespersonid
+            description: ""
+          - name: shipdate
+            description: ""
+          - name: accountnumber
+            description: ""
+
+      - name: sales_salesorderheadersalesreason
+        description: ""
+        columns:
+          - name: salesorderid
+            description: ""
+          - name: modifieddate
+            description: ""
+          - name: salesreasonid
+            description: ""
+
+      - name: sales_salesreason
+        description: ""
+        columns:
+          - name: salesreasonid
+            description: ""
+          - name: name
+            description: ""
+          - name: reasontype
+            description: ""
+          - name: modifieddate
+            description: ""
+
+      - name: stateprovince
+        description: ""
+        columns:
+          - name: stateprovinceid
+            description: ""
+          - name: countryregioncode
+            description: ""
+          - name: modifieddate
+            description: ""
+          - name: rowguid
+            description: ""
+          - name: name
+            description: ""
+          - name: territoryid
+            description: ""
+          - name: isonlystateprovinceflag
+            description: ""
+          - name: stateprovincecode
+            description: ""
+
+      - name: sales_store
+        description: ""
+        columns:
+          - name: businessentityid
+            description: ""
+          - name: storename
+            description: ""
+          - name: salespersonid
+            description: ""
+          - name: modifieddate
+            description: ""

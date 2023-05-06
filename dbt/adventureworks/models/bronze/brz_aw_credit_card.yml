@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: brz_aw_credit_card
+    description: ""
+    columns:
+      - name: credit_card_id
+        description: ""
+        tests:
+          - not_null
+          - unique
+      - name: card_type
+        description: ""
+
+      - name: expiry_year
+        description: ""
+
+      - name: modified_date
+        description: ""
+
+      - name: expiry_month
+        description: ""
+
+      - name: card_number
+        description: ""

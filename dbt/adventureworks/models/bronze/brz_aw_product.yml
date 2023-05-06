@@ -1,0 +1,67 @@
+version: 2
+
+models:
+  - name: brz_aw_product
+    description: ""
+    columns:
+      - name: product_id
+        description: ""
+        tests:
+          - not_null
+          - unique
+      - name: product_name
+        description: ""
+
+      - name: safety_stock_level
+        description: ""
+
+      - name: finished_goods_flag
+        description: ""
+
+      - name: class
+        description: ""
+
+      - name: make_flag
+        description: ""
+
+      - name: product_number
+        description: ""
+
+      - name: reorder_point
+        description: ""
+
+      - name: modified_date
+        description: ""
+
+      - name: row_guid
+        description: ""
+
+      - name: product_model_id
+        description: ""
+
+      - name: weight_unit_measure_code
+        description: ""
+
+      - name: standard_cost
+        description: ""
+
+      - name: product_subcategory_id
+        description: ""
+
+      - name: list_price
+        description: ""
+
+      - name: days_to_manufacture
+        description: ""
+
+      - name: product_line
+        description: ""
+
+      - name: color
+        description: ""
+
+      - name: sell_start_date
+        description: ""
+
+      - name: weight
+        description: ""

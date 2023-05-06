@@ -22,19 +22,19 @@ services:
       - ${PROJ_DIR:-.}/postgres/data:/var/lib/postgresql/data
       - ${PROJ_DIR:-.}/postgres/config/init.sql:/docker-entrypoint-initdb.d/init.sql
 
-  dbt-postgres-init:
+  dbt-init:
     <<: *dbt-common
     entrypoint: ["dbt"]
     command: deps
     volumes: *dbt-common-volumes
 
-  dbt-postgres-run:
+  dbt-run:
     <<: *dbt-common
     entrypoint: ["dbt"]
-    command: run
+    command: ["run"]
     volumes: *dbt-common-volumes
 
-  dbt-postgres-test:
+  dbt-test:
     <<: *dbt-common
     entrypoint: ["dbt"]
     command: test
@@ -46,7 +46,7 @@ services:
     command: ["run-operation", "elementary.generate_elementary_cli_profile"]
     volumes: *dbt-common-volumes
 
-  dbt-postgres-edr-report:
+  dbt-edr-report:
     <<: *dbt-common
     entrypoint: ["edr"]
     command: ["report", "--file-path", "/usr/app/reports/report.html"]

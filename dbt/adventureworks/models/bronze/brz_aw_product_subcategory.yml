@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: brz_aw_product_subcategory
+    description: ""
+    columns:
+      - name: product_subcategory_id
+        description: ""
+        tests:
+          - not_null
+          - unique
+      - name: product_category_id
+        description: ""
+
+      - name: product_subcategory_name
+        description: ""
+
+      - name: modified_date
+        description: ""

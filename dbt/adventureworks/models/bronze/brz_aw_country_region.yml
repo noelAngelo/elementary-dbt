@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: brz_aw_country_region
+    description: ""
+    columns:
+      - name: country_region_code
+        description: ""
+        tests:
+          - not_null
+          - unique
+      - name: modified_date
+        description: ""
+
+      - name: country_region_name
+        description: ""

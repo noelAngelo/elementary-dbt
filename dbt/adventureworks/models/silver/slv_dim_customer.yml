@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: slv_dim_customer
+    columns:
+      - name: customer_key
+        description: The surrogate key of the customer
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: The natural key of the customer
+        tests:
+          - not_null
+          - unique
+          
+      - name: full_name
+        description: The customer name. Adopted as customer full name when person name is not null.
+
+      - name: business_entity_id
+      
+      - name: store_business_entity_id
+
+      - name: store_name
+        description: The store name.
+      - name: modified_date
+        description: The modified date

@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: brz_aw_person
+    description: ""
+    columns:
+      - name: business_entity_id
+        description: ""
+        tests:
+          - not_null
+          - unique
+      - name: title
+        description: ""
+
+      - name: first_name
+        description: ""
+
+      - name: middle_name
+        description: ""
+
+      - name: last_name
+        description: ""
+
+      - name: person_type
+        description: ""
+
+      - name: name_style
+        description: ""
+
+      - name: suffix
+        description: ""
+
+      - name: modified_date
+        description: ""
+
+      - name: row_guid
+        description: ""
+
+      - name: email_promotion
+        description: ""
